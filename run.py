@@ -18,7 +18,13 @@ def printBoard(board):
 
 # take player input
 def playerInput(board):
-    inp = int(input("Select a spot 1-9: "))
+    while True: 
+        inp =input("Select a spot 1-9: ")
+        if int(inp) in range(1,9):
+            break
+        else:
+            print("that input will be invalid")
+            continue
     if board[inp-1] == "-":
         board[inp-1] = currentPlayer
     else:
