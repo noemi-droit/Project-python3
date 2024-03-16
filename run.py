@@ -15,6 +15,8 @@ def printBoard(board):
     print("---------")
     print(board[6] + " | " + board[7] + " | " + board[8])
     print("---------")
+
+
 # check if a player has won
 def check_win(board, player):
     win-combinations==[
@@ -30,4 +32,12 @@ def check_win(board, player):
 for combination in win_combinations:
     if all(cell==player for cell in combination):
        return True
-    return False
+       return False
+
+# play game
+def play_game():
+    board = [""]*9
+    player = "X"
+    while True:
+        print_board(board)
+        move=int(input(f"Player{player}, enter your move (1-9):"))-1
