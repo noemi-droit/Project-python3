@@ -41,3 +41,16 @@ def play_game():
     while True:
         print_board(board)
         move=int(input(f"Player{player}, enter your move (1-9):"))-1
+        if board [move] ==player
+           if check_win(board,player):
+            print_board(board)
+            print(f"Player{player}wins!")
+            break
+            if ''not in board:
+                print_board(board)
+                print("It's a tie!")
+                break
+            player="O" if player = "X" else "X"
+            else:
+                print("Invalid move, try again")
+
