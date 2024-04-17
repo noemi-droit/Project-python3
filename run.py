@@ -15,8 +15,15 @@ def printBoard(board):
     print("---------")
     print(board[6] + " | " + board[7] + " | " + board[8])
     print("---------")
+    
 
 #Take player input
-#Check your win or tie
+def playerInput (input):
+    inp = int(input("Enter a number 1-9:"))
+    if inp >= 1 and inp <=9 and board[inp-1] == "-":
+       board [inp-1] = currentPlayer
+    else:
+        print("Ooops chose another spot!")
+    #Check your win or tie
 #Switch the player
 #Check for win or tie again
