@@ -1,11 +1,11 @@
 
 board = ["-", "-", "-",
-        "-", "-", "-",
-        "-", "-", "-",]
+         "-", "-", "-",
+         "-", "-", "-",]
 
 currentPlayer = "X"
-winner= None
-gameRunning= True
+winner = None
+gameRunning = True
 
 # Printing the game board
 def printBoard(board):
@@ -20,7 +20,7 @@ def printBoard(board):
 #Take player input
 def playerInput (input):
     inp = int(input("Enter a number 1-9:"))
-    if inp >= 1 and inp <=9 and board[inp-1] == "-":
+    if inp >= 1 and inp <= 9 and board[inp-1] == "-":
        board [inp-1] = currentPlayer
     else:
         print("Ooops chose another spot!")
